@@ -1,19 +1,18 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
 export default defineConfig({
-  // 🚨 CRITICAL FIX 1: Set base path for assets to load correctly on custom domain
-  base: '/',
+  // CRITICAL FIX: Base path for deployment on custom domain
+  base: '/', 
   
   plugins: [react()],
   
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
-      // NOTE: I recommend cleaning up this alias section if possible, as 
-      // it is redundant when dependencies are correctly installed.
-      // However, I have kept your existing aliases.
+      // NOTE: Your specific dependency aliases are kept here.
       'vaul@1.1.2': 'vaul',
       'sonner@2.0.3': 'sonner',
       'recharts@2.15.2': 'recharts',
@@ -58,8 +57,7 @@ export default defineConfig({
   
   build: {
     target: 'esnext',
-    // 🚨 CRITICAL FIX 2: Change outDir from 'build' to 'dist' (Vite's default)
-    // The package.json script uses '-d dist', so this must match.
+    // CRITICAL FIX: Output directory must match gh-pages script
     outDir: 'dist', 
   },
   
