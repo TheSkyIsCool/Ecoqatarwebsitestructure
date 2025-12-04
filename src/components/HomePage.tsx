@@ -85,11 +85,11 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
         </motion.div>
         
-        <h1 className="text-green-800 mb-4">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-green-800 mb-4 tracking-tight">
           EcoQatar – For a Greener Future 🇶🇦
         </h1>
         
-        <p className="text-green-600 max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-green-600 max-w-2xl mx-auto mb-8">
           Join Qatar's journey towards sustainability. Monitor air quality, discover recycling locations, 
           and get personalized eco tips powered by AI.
         </p>
@@ -131,6 +131,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}
               whileHover={{ scale: 1.05, y: -5 }}
+              className="transform"
             >
               <Card className="border-green-100 shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
@@ -139,9 +140,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-green-600 mb-1">{stat.label}</p>
-                      <p className="text-green-900 mb-1">{stat.value}</p>
-                      <p className="text-green-500">{stat.description}</p>
+                      <p className="text-sm font-medium text-green-600 mb-1">{stat.label}</p>
+                      <p className="text-2xl font-bold text-green-900 mb-1">{stat.value}</p>
+                      <p className="text-xs text-green-500">{stat.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -158,7 +159,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         transition={{ delay: 0.4 }}
         className="mb-12"
       >
-        <h2 className="text-green-800 mb-6 text-center">Explore Our Features</h2>
+        <h2 className="text-3xl font-bold text-green-800 mb-6 text-center">Explore Our Core Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -169,6 +170,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 whileHover={{ y: -8 }}
+                className="transform"
               >
                 <Card 
                   className="border-green-100 hover:border-green-300 transition-all cursor-pointer h-full shadow-md hover:shadow-xl"
@@ -178,8 +180,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                     <div className={`w-12 h-12 rounded-xl ${feature.color} flex items-center justify-center mb-4`}>
                       <Icon className="w-6 h-6" />
                     </div>
-                    <h3 className="text-green-800 mb-2">{feature.title}</h3>
-                    <p className="text-green-600">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-green-800 mb-2">{feature.title}</h3>
+                    <p className="text-sm text-green-600">{feature.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -196,7 +198,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       >
         <Card className="border-green-200 bg-gradient-to-br from-green-50 to-white shadow-lg">
           <CardHeader>
-            <CardTitle className="text-green-800 text-center">Contact Us</CardTitle>
+            <CardTitle className="text-2xl font-bold text-green-800 text-center">Contact Us</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -211,10 +213,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <Phone className="w-6 h-6 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-green-700 mb-1">Phone</p>
+                  <p className="text-sm font-medium text-green-700 mb-1">Phone</p>
                   <a 
                     href="tel:+97444445555" 
-                    className="text-green-600 hover:text-green-800 transition-colors"
+                    className="text-lg font-semibold text-green-600 hover:text-green-800 transition-colors"
                   >
                     +974 4444 5555
                   </a>
@@ -232,10 +234,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <Mail className="w-6 h-6 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-green-700 mb-1">Email</p>
+                  <p className="text-sm font-medium text-green-700 mb-1">Email</p>
                   <a 
                     href="mailto:sample@dpsmisdoha.com" 
-                    className="text-green-600 hover:text-green-800 transition-colors break-all"
+                    className="text-lg font-semibold text-green-600 hover:text-green-800 transition-colors break-all"
                   >
                     sample@dpsmisdoha.com
                   </a>
@@ -253,8 +255,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <MapPin className="w-6 h-6 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-green-700 mb-1">Location</p>
-                  <p className="text-green-600">
+                  <p className="text-sm font-medium text-green-700 mb-1">Location</p>
+                  <p className="text-lg font-semibold text-green-600">
                     DPS Modern Indian School, Al Wakrah
                   </p>
                 </div>
